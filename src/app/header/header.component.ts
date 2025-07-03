@@ -1,5 +1,4 @@
 import { Component } from '@angular/core';
-// import {image} from 'C:\Users\Akhter Laptops\Desktop\Angular\doc-app\src\assets\logo-BNCDj_dh.svg';
 
 @Component({
   selector: 'app-header',
@@ -7,6 +6,6 @@ import { Component } from '@angular/core';
   styleUrls: ['./header.component.scss']
 })
 export class HeaderComponent {
-logoImage = "assets/images/logo-BNCDj_dh.svg"
+logoImage = "assets/images/logo-BNCDj_dh.svg";
   
 }

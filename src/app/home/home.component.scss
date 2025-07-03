@@ -1,0 +1,88 @@
+.banner {
+    background-color: rgb(95 111 255);
+    height: 530px;
+    border-radius: 10px;
+    margin-top: 10px;
+}
+
+.banner-image {
+    height: 400px;
+    width: 500px;
+    margin-top: 130px;
+}
+
+.left-content {
+    display: flex;
+    align-items: center;
+}
+
+.left-heading {
+    color: white;
+    font-size: 50px;
+    line-height: 1.2;
+    font-weight: bold;
+}
+
+.left-text {
+    color: white;
+    font-size: 14px;
+}
+
+.banner-btn {
+    width: 200px;
+    border: 0px;
+    color: gray;
+    padding: 10px;
+    border-radius: 25px;
+
+}
+
+.home-text {
+    text-align: center;
+    margin-top: 25px;
+}
+
+.speciality {
+    cursor: pointer;
+}
+
+.speciality:hover {
+    transform: translateY(-5px);
+    transition: transform 0.3s ease;
+}
+.top-doctors{
+    text-align: center;
+    margin-top: 125px;
+}
+.doc-img{
+    background: rgb(234 239 255);
+}
+.doc-name{
+    font-size: 14px;
+    font-weight: bold;
+}
+.available-icon{
+    font-size: 10px;
+    margin-right: 5px;
+}
+.load-more{
+    text-align: center;
+}
+.load-more button{
+    color: rgb(75 85 99);
+    width: 120px;
+    background-color: rgb(234 239 255);
+    border-radius: 30px;
+    padding: 14px;
+    margin-top: 20px;
+    border: 0px;
+}
+.second-banner-image{
+       height: 400px;
+    width: 420px;
+    margin-top: 130px;
+}
+.left-side-content{
+    margin-left: 80px;
+
+}

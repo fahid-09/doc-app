@@ -3,17 +3,16 @@
         <img src={{logoImage}} alt="Logo">
     </div>
     <div class="menu">
-<ul>
-    <li>Home</li>
-    <li>All Doctors</li>
-    <li>About</li>
-    <li>Contact</li>
-    <li>Admin Panel</li>
+        <ul>
 
-
-</ul>
+            <li><a routerLink="/" routerLinkActive="active-link" [routerLinkActiveOptions]="{ exact: true }">Home </a></li>
+            <li> <a routerLink="all-doctors" routerLinkActive="active-link">All Doctors </a></li>
+            <li> <a routerLink="/about" routerLinkActive="active-link">About</a></li>
+            <li> <a routerLink="/contact" routerLinkActive="active-link">Contact</a></li>
+            <li> <a routerLink="">Admin Panel</a></li>
+        </ul>
     </div>
-    <div>
+    <div class="mt-2">
         <button class="btn btn-primary">Create Account</button>
     </div>
 

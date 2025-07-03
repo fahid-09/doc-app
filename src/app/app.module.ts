@@ -6,17 +6,25 @@ import { AppComponent } from './app.component';
 import { NgbModule } from '@ng-bootstrap/ng-bootstrap';
 import { FontAwesomeModule } from '@fortawesome/angular-fontawesome';
 import { HeaderComponent } from './header/header.component';
+import {RouterLink, RouterOutlet} from '@angular/router';
+import { AllDoctorsComponent } from './all-doctors/all-doctors.component';
+import { HomeComponent } from './home/home.component';
+import { FooterComponent } from './footer/footer.component'
+
 
 @NgModule({
   declarations: [
     AppComponent,
-    HeaderComponent
+    HeaderComponent,
+    AllDoctorsComponent,
+    HomeComponent,
+    FooterComponent
   ],
   imports: [
     BrowserModule,
     AppRoutingModule,
     NgbModule,
-    FontAwesomeModule
+    FontAwesomeModule, RouterLink, RouterOutlet
   ],
   providers: [],
   bootstrap: [AppComponent]

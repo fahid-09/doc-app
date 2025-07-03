@@ -1,9 +1,44 @@
-.nav{
+.nav {
     display: flex;
     justify-content: space-between;
     margin-top: 20px;
+    border-bottom: 1px solid gray;
 }
+
 .menu ul li {
-display: inline;
-padding-right: 15px;
+    display: inline;
+    padding-right: 15px;
+}
+
+.menu {
+    margin-top: 20px;
+    font-size: 16px;
+    font-weight: bold;
+}
+
+ul a {
+    text-decoration: none;
+    color: #007bff;
+
+}
+
+.active-link {
+    border-bottom: 2px solid #007bff; /* Sirf active link ke niche line aayegi */
+    padding-bottom: 5px;
+    color: #007bff; /* Optional: active link color */
+}
+
+ul {
+    list-style: none;
+    display: flex;
+    gap: 20px; /* Menu item spacing */
+}
+
+a {
+    text-decoration: none;
+    color: black; /* Normal link color */
+}
+
+a:hover {
+    color: #007bff; /* Hover color */
 }
