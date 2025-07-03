@@ -1,0 +1,28 @@
+.all-doctors {
+  margin-top: 30px;
+}
+ul {
+  margin-left: -30px;
+}
+
+ul li {
+  list-style: none;
+  border: 1px solid lightgray;
+  width: 220px;
+  margin-bottom: 20px;
+  padding-left: 10px;
+}
+ul li a {
+  text-decoration: none;
+  color: gray;
+}
+.card-doctor {
+  cursor: pointer;
+}
+.card-doctor :hover {
+  transform: translateY(-5px);
+  transition: transform 0.3s ease;
+}
+.doc-img {
+  background: rgb(234 239 255);
+}

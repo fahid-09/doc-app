@@ -1,1 +1,42 @@
-<p>all-doctors works!</p>
+<div class="all-doctors">
+  <h6>Browse through the doctors specialist.</h6>
+
+  <div>
+    <div class="row">
+      <div class="col-sm-3 mt-3">
+        <ul>
+          <li><a routerLink="">General Physician</a></li>
+          <li><a routerLink="">Gynecologist</a></li>
+          <li><a routerLink="">Dermatologist</a></li>
+          <li><a routerLink="">Pediatricians</a></li>
+          <li><a routerLink="">Neurologist</a></li>
+          <li><a routerLink="">Gastroenterologist</a></li>
+        </ul>
+      </div>
+      <div class="col-sm-9">
+        <div class="row g-3 mt-0 card-doctor">
+          <!-- g-3 adds spacing between columns -->
+          <div class="col-sm-4" *ngFor="let doctor of topDoctors">
+            <div class="card h-100">
+              <!-- Card inside column -->
+              <img
+                src="{{ doctor.image }}"
+                class="card-img-top doc-img"
+                alt="Doctor Image"
+              />
+              <div class="card-body">
+                <h5 class="card-title" style="color: #6aa76a">
+                  <!-- <fa-icon [icon]="circle" class="available-icon"></fa-icon
+                    > -->
+                  {{ doctor.available | titlecase }}
+                </h5>
+                <p class="card-text doc-name mb-1">{{ doctor.name }}</p>
+                <p class="card-text">{{ doctor.specialist }}</p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
