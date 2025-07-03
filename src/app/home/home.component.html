@@ -1,75 +1,88 @@
 <div class="container">
-    <div class="row banner">
-        <div class="col-sm-6 left-content">
-            <div class="left-side-content">
-                <p class="left-heading">Book Appointment with Trusted Doctors</p>
-                <div class="row">
-                    <span class="col-sm-4"><img src={{leftImage}} alt=""></span>
-                    <span class="col-sm-8">
-                        <p class="left-text p-0">Simply browse through our extensive list of trusted <br> doctors,
-                            schedule your appointment hassle-free.</p>
-                    </span>
-                </div>
-                <div>
-                    <button class="banner-btn">Book Appointment <img src={{arrowIcon}} alt=""></button>
-                </div>
-            </div>
+  <div class="row banner">
+    <div class="col-sm-6 left-content">
+      <div class="left-side-content">
+        <p class="left-heading">Book Appointment with Trusted Doctors</p>
+        <div class="row">
+          <span class="col-sm-4"><img src="{{ leftImage }}" alt="" /></span>
+          <span class="col-sm-8">
+            <p class="left-text p-0">
+              Simply browse through our extensive list of trusted <br />
+              doctors, schedule your appointment hassle-free.
+            </p>
+          </span>
         </div>
-
-        <div class="col-sm-6">
-            <img src={{bannerImage}} alt="banner" class="banner-image">
+        <div>
+          <button class="banner-btn">
+            Book Appointment <img src="{{ arrowIcon }}" alt="" />
+          </button>
         </div>
-    </div>
-    <div class="home-text">
-        <h2>Find By Speciality</h2>
-        <p>Simply browse through our extensive list of trusted doctors, <br> schedule your
-            appointment hassle-free.</p>
-    </div>
-    <div class="row" style="text-align: center;">
-        <span class="col-sm-2" *ngFor="let img of specialities"> <img src={{img.image}} class="speciality" alt=""><span
-                class="speciality">{{img.title}}</span></span>
+      </div>
     </div>
 
-    <div class="top-doctors">
-        <h2>Top Doctors to Book</h2>
-        <p>Simply browse through our extensive list of trusted doctors.</p>
+    <div class="col-sm-6">
+      <img src="{{ bannerImage }}" alt="banner" class="banner-image" />
     </div>
+  </div>
+  <div class="home-text">
+    <h2>Find By Speciality</h2>
+    <p>
+      Simply browse through our extensive list of trusted doctors, <br />
+      schedule your appointment hassle-free.
+    </p>
+  </div>
+  <div class="row" style="text-align: center">
+    <span class="col-sm-2 speciality" *ngFor="let img of specialities">
+      <img src="{{ img.image }}" class="" alt="" /><span class="speciality">{{
+        img.title
+      }}</span>
+    </span>
+  </div>
 
-    <div class="container">
-        <div class="row g-3"> <!-- g-3 adds spacing between columns -->
-            <div class="col-sm-3" *ngFor="let doctor of topDoctors">
-                <div class="card h-100"> <!-- Card inside column -->
-                    <img src="{{ doctor.image }}" class="card-img-top doc-img" alt="Doctor Image">
-                    <div class="card-body">
-                        <h5 class="card-title" style="color: #6aa76a;"><fa-icon [icon]="circle"
-                                class="available-icon"></fa-icon>{{doctor.available | titlecase}}</h5>
-                        <p class="card-text doc-name mb-1">{{doctor.name}} </p>
-                        <p class="card-text">{{doctor.specialist}}</p>
-                    </div>
-                </div>
-            </div>
-        </div>
-        <div class="load-more">
-            <button>more</button>
+  <div class="top-doctors">
+    <h2>Top Doctors to Book</h2>
+    <p>Simply browse through our extensive list of trusted doctors.</p>
+  </div>
 
+  <div class="container">
+    <div class="row g-3 card-doctor">
+      <!-- g-3 adds spacing between columns -->
+      <div class="col-sm-3" *ngFor="let doctor of topDoctors">
+        <div class="card h-100">
+          <!-- Card inside column -->
+          <img
+            src="{{ doctor.image }}"
+            class="card-img-top doc-img"
+            alt="Doctor Image"
+          />
+          <div class="card-body">
+            <h5 class="card-title" style="color: #6aa76a">
+              <fa-icon [icon]="circle" class="available-icon"></fa-icon
+              >{{ doctor.available | titlecase }}
+            </h5>
+            <p class="card-text doc-name mb-1">{{ doctor.name }}</p>
+            <p class="card-text">{{ doctor.specialist }}</p>
+          </div>
         </div>
+      </div>
     </div>
-
-    <div class="row left-content banner">
-        <div class="col-sm-6">
-            <div class="left-side-content">
-                  <p class="left-heading">Book Appointment with 100+ Trusted Doctors</p>
-           
-            <div>
-                <button class="banner-btn">Create account</button>
-            </div>
-            </div>
-          
-        </div>
-         <div class="col-sm-6">
-            <img src={{secondBanner}} alt="banner" class="second-banner-image">
-        </div>
+    <div class="load-more">
+      <button>more</button>
     </div>
+  </div>
 
-   
+  <div class="row left-content banner">
+    <div class="col-sm-6">
+      <div class="left-side-content">
+        <p class="left-heading">Book Appointment with 100+ Trusted Doctors</p>
+
+        <div>
+          <button class="banner-btn">Create account</button>
+        </div>
+      </div>
+    </div>
+    <div class="col-sm-6">
+      <img src="{{ secondBanner }}" alt="banner" class="second-banner-image" />
+    </div>
+  </div>
 </div>
