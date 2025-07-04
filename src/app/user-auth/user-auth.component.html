@@ -1,0 +1,32 @@
+<div class="seller-auth">
+    <div *ngIf="!showLogin" class="signup">
+        <h1>User SignUp </h1>
+
+        <form autocomplete="off" class="common-form" #userSignup="ngForm"
+            (ngSubmit)="signupUser(userSignup.value, userSignup)">
+            <input class="form-input" type="text" placeholder="enter name" name="name" ngModel>
+
+            <input class="form-input" type="text" name="email" placeholder="enter email" ngModel>
+
+            <input class="form-input" type="password" name="password" placeholder="enter password" ngModel>
+
+            <input type="file" name="image" ngModel (change)="fileChange($event)">
+            <button class="form-button">Sign Up</button>
+            <a class="openForm" (click)="openLoginSignupForm()">Already Have an Account? Login</a>
+        </form>
+    </div>
+    <!-- login area -->
+    <div *ngIf="showLogin" class="login">
+        <p>{{userError}}
+            
+        </p>
+        <h1>User Login</h1>
+        <form autocomplete="off" class="common-form" #userLogin="ngForm" (ngSubmit)="login(userLogin.value)">
+            <input class="form-input" type="text" ngModel name="email" placeholder="enter email">
+            <input class="form-input" type="text" ngModel name="password" placeholder="enter password">
+            <button class="form-button">Login</button>
+            <a class="openForm" (click)="openLoginSignupForm()">Don't Have an Account? signUp</a>
+        </form>
+    </div>
+
+</div>

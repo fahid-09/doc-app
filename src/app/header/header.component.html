@@ -5,7 +5,8 @@
     <div class="menu">
         <ul>
 
-            <li><a routerLink="/" routerLinkActive="active-link" [routerLinkActiveOptions]="{ exact: true }">Home </a></li>
+            <li><a routerLink="/" routerLinkActive="active-link" [routerLinkActiveOptions]="{ exact: true }">Home </a>
+            </li>
             <li> <a routerLink="all-doctors" routerLinkActive="active-link">All Doctors </a></li>
             <li> <a routerLink="/about" routerLinkActive="active-link">About</a></li>
             <li> <a routerLink="/contact" routerLinkActive="active-link">Contact</a></li>
@@ -13,7 +14,46 @@
         </ul>
     </div>
     <div class="mt-2">
-        <button class="btn btn-primary">Create Account</button>
+        <button *ngIf="!userName" routerLink="user-auth" class="btn btn-primary">Signup/Login</button>
+        <!-- {{userName}} -->
+        <!-- <div *ngIf="userName" class="dropdown" (click)="toggleDropdown()" >
+
+            <div class="d-flex align-items-center cursor-pointer">
+                <img src="https://cdn-icons-png.flaticon.com/512/847/847969.png" alt="Profile" width="35" height="35"
+                    class="rounded-circle" />
+                <i class="bi bi-caret-down-fill ms-2"></i>
+            </div>
+
+            <ul class="dropdown-menu dropdown-menu-end mt-2" [class.show]="showDropdown">
+                <li><a class="dropdown-item" href="javascript:void(0)">My Profile</a></li>
+                <li><a class="dropdown-item" href="#">My Appointments</a></li>
+                <li><a class="dropdown-item text-primary" href="#">Source Code</a></li>
+                <li>
+                    <hr class="dropdown-divider">
+                </li>
+                <li><a class="dropdown-item" (click)="logout()">Logout</a></li>
+            </ul>
+        </div> -->
+
+        <div *ngIf="userName" class="col">
+		<div ngbDropdown class="d-inline-block">
+			<button type="button" class="btn btn-outline-primary" id="dropdownBasic1" ngbDropdownToggle>
+				<img src="https://cdn-icons-png.flaticon.com/512/847/847969.png" alt="Profile" width="35" height="35"
+                    class="rounded-circle" />
+			</button>
+			<div ngbDropdownMenu aria-labelledby="dropdownBasic1">
+				<button ngbDropdownItem>My Profile ({{userName}})</button>
+				<button ngbDropdownItem>My Appointments</button>
+				<button ngbDropdownItem>Source Code</button>
+                 <hr class="dropdown-divider">
+				<button (click)="logout()" ngbDropdownItem>Logout</button>
+
+			</div>
+		</div>
+	</div>
+
+
+
     </div>
 
 </div>

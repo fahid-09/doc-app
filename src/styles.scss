@@ -4,9 +4,37 @@
 @import 'bootstrap/scss/bootstrap';
 
 
-body{
+body {
     margin: 0px;
     padding: 0px;
     font-family: sans-serif;
-        background:#FFFCFB
+    background: #FFFCFB
+}
+
+.common-form {
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+    margin: auto;
+    width: 300px;
+}
+
+.form-input {
+    height: 35px;
+    margin-bottom: 20px;
+    padding-left: 10px;
+    color: #007bff;
+    border: 1px solid #007bff;
+}
+.form-button {
+    color: #007bff;
+    font-size: 20px;
+    font-weight: 500;
+    height: 40px;
+    cursor: pointer;
+}
+.form-input :focus{
+    outline: none !important;
+    border: 1px solid blueviolet;
+    box-shadow: 0 0 10px #719ECE;
 }

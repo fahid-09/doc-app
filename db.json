@@ -1,0 +1,17 @@
+{
+  "user": [
+    {
+      "name": "umer",
+      "email": "Umer@gmail.com",
+      "password": "umer123",
+      "id": 1
+    },
+    {
+      "name": "11",
+      "email": "Umer@gmail.com",
+      "password": "umer123",
+      "image": "C:\\fakepath\\header_img-DhAi3lLA.png",
+      "id": 2
+    }
+  ]
+}

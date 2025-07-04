@@ -26,3 +26,8 @@ ul li a {
 .doc-img {
   background: rgb(234 239 255);
 }
+.active-link {
+  background-color: blue;
+    padding-bottom: 5px;
+    color: #007bff; /* Optional: active link color */
+}

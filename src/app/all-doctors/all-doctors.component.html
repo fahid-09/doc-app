@@ -5,12 +5,12 @@
     <div class="row">
       <div class="col-sm-3 mt-3">
         <ul>
-          <li><a routerLink="">General Physician</a></li>
-          <li><a routerLink="">Gynecologist</a></li>
-          <li><a routerLink="">Dermatologist</a></li>
-          <li><a routerLink="">Pediatricians</a></li>
-          <li><a routerLink="">Neurologist</a></li>
-          <li><a routerLink="">Gastroenterologist</a></li>
+          <li><a  routerLinkActive="active-link" [routerLinkActiveOptions]="{ exact: true }">General Physician</a></li>
+          <li><a  routerLinkActive="active-link">Gynecologist</a></li>
+          <li><a  routerLinkActive="active-link">Dermatologist</a></li>
+          <li><a  routerLinkActive="active-link">Pediatricians</a></li>
+          <li><a  routerLinkActive="active-link">Neurologist</a></li>
+          <li><a  routerLinkActive="active-link">Gastroenterologist</a></li>
         </ul>
       </div>
       <div class="col-sm-9">
