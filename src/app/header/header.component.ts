@@ -9,6 +9,9 @@ import { Router } from '@angular/router';
 })
 export class HeaderComponent {
   constructor(private router: Router) {}
+
+  
+  userImage: string = "";
   logoImage = 'assets/images/logo-BNCDj_dh.svg';
   userName: string = '';
   showDropdown: boolean = false;
@@ -25,14 +28,10 @@ export class HeaderComponent {
       if (value.url) {
         if (localStorage.getItem('user')) {
           let userAccount = localStorage.getItem('user');
-          // console.log('hello', userAccount);
-
           let userData = userAccount && JSON.parse(userAccount);
-          // console.log('userdata ', userData);
-
           this.userName = userData.name;
+          this.userImage = userData.image;
         }
-        // console.log('name is', this.userName);
       }
     });
   }

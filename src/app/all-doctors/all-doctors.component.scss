@@ -28,6 +28,22 @@ ul li a {
 }
 .active-link {
   background-color: blue;
-    padding-bottom: 5px;
-    color: #007bff; /* Optional: active link color */
+  padding-bottom: 5px;
+  color: #007bff; /* Optional: active link color */
+}
+.action-buton {
+  display: flex;
+  justify-content: space-between;
+}
+.delete-icon {
+  margin-left: 16px;
+  font-size: 20px;
+}
+.edit-icon{
+      font-size: 20px;
+    margin-right: 10px;
+}
+.view-icon{
+      font-size: 20px;
+    margin-right: 10px;
 }

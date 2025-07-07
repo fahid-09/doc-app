@@ -5,33 +5,42 @@
     <div class="row">
       <div class="col-sm-3 mt-3">
         <ul>
-          <li><a  routerLinkActive="active-link" [routerLinkActiveOptions]="{ exact: true }">General Physician</a></li>
-          <li><a  routerLinkActive="active-link">Gynecologist</a></li>
-          <li><a  routerLinkActive="active-link">Dermatologist</a></li>
-          <li><a  routerLinkActive="active-link">Pediatricians</a></li>
-          <li><a  routerLinkActive="active-link">Neurologist</a></li>
-          <li><a  routerLinkActive="active-link">Gastroenterologist</a></li>
+          <li><a routerLinkActive="active-link" [routerLinkActiveOptions]="{ exact: true }">General Physician</a></li>
+          <li><a routerLinkActive="active-link">Gynecologist</a></li>
+          <li><a routerLinkActive="active-link">Dermatologist</a></li>
+          <li><a routerLinkActive="active-link">Pediatricians</a></li>
+          <li><a routerLinkActive="active-link">Neurologist</a></li>
+          <li><a routerLinkActive="active-link">Gastroenterologist</a></li>
         </ul>
       </div>
       <div class="col-sm-9">
+        <div>{{noDoctors}}</div>
         <div class="row g-3 mt-0 card-doctor">
           <!-- g-3 adds spacing between columns -->
           <div class="col-sm-4" *ngFor="let doctor of topDoctors">
             <div class="card h-100">
               <!-- Card inside column -->
-              <img
-                src="{{ doctor.image }}"
-                class="card-img-top doc-img"
-                alt="Doctor Image"
-              />
+              <img src="{{ doctor.image }}" class="card-img-top doc-img" alt="Doctor Image" />
               <div class="card-body">
                 <h5 class="card-title" style="color: #6aa76a">
                   <!-- <fa-icon [icon]="circle" class="available-icon"></fa-icon
                     > -->
-                  {{ doctor.available | titlecase }}
+                  {{ doctor.status | titlecase }}
                 </h5>
                 <p class="card-text doc-name mb-1">{{ doctor.name }}</p>
-                <p class="card-text">{{ doctor.specialist }}</p>
+                <p class="card-text">{{ doctor.specialization }}</p>
+                <p class="card-text">{{ doctor.about }}</p>
+
+              </div>
+              <div class="action-buton">
+                <div>
+                  <fa-icon class="delete-icon" (click)="deleteDoctor(doctor.id)" [icon]="deleteIcon"></fa-icon>
+                </div>
+                <div><a><fa-icon class="edit-icon" [icon]="editIcon"></fa-icon></a>
+                  <fa-icon class="view-icon" [icon]="viewIcon"></fa-icon>
+                </div>
+
+
               </div>
             </div>
           </div>

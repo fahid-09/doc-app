@@ -16,9 +16,8 @@ export class UserAuthComponent {
   constructor(private userService: UserService) {}
 
   signupUser(data: signup, form: NgForm) {
+    data.image = this.uploadImage;
     this.userService.userSignup(data);
-    console.log('user data is ', data);
-
     form.reset();
   }
   

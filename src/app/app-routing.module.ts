@@ -3,11 +3,13 @@ import { RouterModule, Routes } from '@angular/router';
 import { AllDoctorsComponent } from './all-doctors/all-doctors.component';
 import { HomeComponent } from './home/home.component';
 import { UserAuthComponent } from './user-auth/user-auth.component';
+import { AddDoctorComponent } from './admin/add-doctor/add-doctor.component';
 
 const routes: Routes = [
   {path:'' , component: HomeComponent},
   {path:'all-doctors' , component: AllDoctorsComponent},
-  {path:'user-auth', component:UserAuthComponent}
+  {path:'user-auth', component:UserAuthComponent},
+  {path:'add-doctor', component: AddDoctorComponent}
 
 ];
 

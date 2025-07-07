@@ -1,0 +1,25 @@
+<div class="doctor-form">
+    <h2 class="doc-profile">Craete Dr Profile</h2>
+    <form class="common-form" #doctorProfile="ngForm" (ngSubmit)="createDoctor(doctorProfile.value)">
+        <input type="file" id="fileInput" (change)="onFileSelected($event)" />
+        <input type="text" class="form-input" ngModel placeholder="enter name" name="name">
+        <select name="specialization" class="form-input" ngModel>
+            <option value="">Specialization</option>
+            <option value="General Physician">General Physician</option>
+            <option value="Gynecologist">Gynecologist</option>
+            <option value="Dermatologist">Dermatologist</option>
+            <option value="Pediatricians">Pediatricians</option>
+            <option value="Neurologist">Neurologist</option>
+            <option value="Gastroenterologist">Gastroenterologist</option>
+
+        </select>
+        <select name="status" class="form-input" ngModel>
+            <option value="">status</option>
+            <option value="available">available</option>
+            <option value="not available">not available</option>
+        </select>
+        <input type="text" name="fee" ngModel class="form-input" placeholder="enter fee">
+        <textarea name="about" name="about" ngModel class="form-input" placeholder="about"></textarea>
+        <button class="form-button">Craete</button>
+    </form>
+</div>

@@ -1,4 +1,12 @@
 import { Component } from '@angular/core';
+import { DoctorService } from '../services/doctor.service';
+import { doctor } from '../data-types';
+import {
+  faTrash,
+  faPen,
+  faEye,
+  faHeart,
+} from '@fortawesome/free-solid-svg-icons';
 
 @Component({
   selector: 'app-all-doctors',
@@ -6,71 +14,29 @@ import { Component } from '@angular/core';
   styleUrls: ['./all-doctors.component.scss'],
 })
 export class AllDoctorsComponent {
-  topDoctors: {
-    image: string;
-    name: string;
-    available: string;
-    specialist: string;
-  }[] = [
-    {
-      image: 'assets/images/doc1.png',
-      available: 'available',
-      specialist: 'General Physian',
-      name: 'Dr. Richard James',
-    },
-    {
-      image: 'assets/images/doc2.png',
-      available: 'available',
-      specialist: 'Gynecologist',
-      name: 'Dr. Emily Larson',
-    },
-    {
-      image: 'assets/images/doc3.png',
-      available: 'available',
-      specialist: 'Dermatologist',
-      name: 'Dr. Sarah Patel',
-    },
-    {
-      image: 'assets/images/doc4.png',
-      available: 'available',
-      specialist: 'Pediatricians',
-      name: 'Dr. Christopher Lee',
-    },
-    {
-      image: 'assets/images/doc5.png',
-      available: 'available',
-      specialist: 'Neurologist',
-      name: 'Dr. Jennifer Garcia',
-    },
-    {
-      image: 'assets/images/doc6.png',
-      available: 'available',
-      specialist: 'General Physian',
-      name: 'Dr. Christopher Davis',
-    },
-    {
-      image: 'assets/images/doc7.png',
-      available: 'available',
-      specialist: 'Gynecologist',
-      name: 'Dr. Timothy White',
-    },
-    {
-      image: 'assets/images/doc8.png',
-      available: 'available',
-      specialist: 'Dermatologist',
-      name: 'Dr. Ava Mitchell',
-    },
-    {
-      image: 'assets/images/doc9.png',
-      available: 'available',
-      specialist: 'Gastroenterologist',
-      name: 'Dr. Jeffrey King',
-    },
-    {
-      image: 'assets/images/doc10.png',
-      available: 'available',
-      specialist: 'Pediatricians',
-      name: 'Dr. Andrew Williams',
-    },
-  ];
+  constructor(private docService: DoctorService) {}
+  noDoctors : string = "";
+  deleteIcon = faTrash;
+  editIcon = faPen;
+  viewIcon = faEye;
+  topDoctors: doctor[] = [];
+
+  ngOnInit() {
+    this.allDoctor();
+  }
+  allDoctor() {
+    this.docService.getAllDoctors().subscribe((allDoctors) => {
+      this.topDoctors = allDoctors;
+      console.log('haye haye all doctors are', this.topDoctors);
+    });
+  }
+
+  deleteDoctor(id: number) {
+    this.docService.deleteDoctor(id).subscribe((result) => {
+      if (result) {
+        this.allDoctor();
+      }
+      // console.log("the deleted result is ", result);
+    });
+  }
 }

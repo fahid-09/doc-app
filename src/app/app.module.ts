@@ -13,6 +13,7 @@ import { FooterComponent } from './footer/footer.component';
 import { UserAuthComponent } from './user-auth/user-auth.component'
 import { FormsModule } from '@angular/forms';
 import { HttpClientModule } from '@angular/common/http';
+import { AddDoctorComponent } from './admin/add-doctor/add-doctor.component';
 
 
 
@@ -23,7 +24,8 @@ import { HttpClientModule } from '@angular/common/http';
     AllDoctorsComponent,
     HomeComponent,
     FooterComponent,
-    UserAuthComponent
+    UserAuthComponent,
+    AddDoctorComponent
   ],
   imports: [
     BrowserModule,

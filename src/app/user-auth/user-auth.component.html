@@ -10,7 +10,7 @@
 
             <input class="form-input" type="password" name="password" placeholder="enter password" ngModel>
 
-            <input type="file" name="image" ngModel (change)="fileChange($event)">
+            <input type="file" name="image" (change)="fileChange($event)">
             <button class="form-button">Sign Up</button>
             <a class="openForm" (click)="openLoginSignupForm()">Already Have an Account? Login</a>
         </form>
@@ -18,7 +18,6 @@
     <!-- login area -->
     <div *ngIf="showLogin" class="login">
         <p>{{userError}}
-            
         </p>
         <h1>User Login</h1>
         <form autocomplete="off" class="common-form" #userLogin="ngForm" (ngSubmit)="login(userLogin.value)">
