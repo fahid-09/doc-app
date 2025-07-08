@@ -14,6 +14,8 @@ import { UserAuthComponent } from './user-auth/user-auth.component'
 import { FormsModule } from '@angular/forms';
 import { HttpClientModule } from '@angular/common/http';
 import { AddDoctorComponent } from './admin/add-doctor/add-doctor.component';
+import { ViewDoctorProfileComponent } from './admin/view-doctor-profile/view-doctor-profile.component';
+import { UpdateDoctorComponent } from './admin/update-doctor/update-doctor.component';
 
 
 
@@ -25,7 +27,9 @@ import { AddDoctorComponent } from './admin/add-doctor/add-doctor.component';
     HomeComponent,
     FooterComponent,
     UserAuthComponent,
-    AddDoctorComponent
+    AddDoctorComponent,
+    ViewDoctorProfileComponent,
+    UpdateDoctorComponent
   ],
   imports: [
     BrowserModule,

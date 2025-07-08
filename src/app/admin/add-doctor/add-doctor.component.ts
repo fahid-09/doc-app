@@ -1,6 +1,7 @@
 import { Component } from '@angular/core';
 import { doctor } from 'src/app/data-types';
 import { DoctorService } from 'src/app/services/doctor.service';
+import { faImage } from '@fortawesome/free-solid-svg-icons';
 
 @Component({
   selector: 'app-add-doctor',
@@ -9,6 +10,7 @@ import { DoctorService } from 'src/app/services/doctor.service';
 })
 export class AddDoctorComponent {
   uploadImage: any;
+  imageUploadIcon = faImage; 
   constructor(private docService: DoctorService) {}
 
   createDoctor(data: doctor) {

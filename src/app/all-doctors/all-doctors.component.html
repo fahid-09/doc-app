@@ -29,18 +29,16 @@
                 </h5>
                 <p class="card-text doc-name mb-1">{{ doctor.name }}</p>
                 <p class="card-text">{{ doctor.specialization }}</p>
-                <p class="card-text">{{ doctor.about }}</p>
+                <!-- <p class="card-text">{{ doctor.about }}</p> -->
 
               </div>
               <div class="action-buton">
                 <div>
                   <fa-icon class="delete-icon" (click)="deleteDoctor(doctor.id)" [icon]="deleteIcon"></fa-icon>
                 </div>
-                <div><a><fa-icon class="edit-icon" [icon]="editIcon"></fa-icon></a>
-                  <fa-icon class="view-icon" [icon]="viewIcon"></fa-icon>
+                <div><a><fa-icon class="edit-icon" [icon]="editIcon" routerLink="/update-doctor/{{doctor.id}}"></fa-icon></a>
+                  <fa-icon class="view-icon" [icon]="viewIcon" routerLink="/view-doctor/{{doctor.id}}"></fa-icon>
                 </div>
-
-
               </div>
             </div>
           </div>
